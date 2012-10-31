@@ -5,7 +5,8 @@ from django.conf.urls.defaults import patterns, include, url
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^$', 'views.index', name='index'),
+    url(r'^/catalog$', 'views.index', name='index'),
+    url(r'^/catalog/$', 'views.index', name='index'),
     # Examples:
     # url(r'^$', 'commitvocab.views.home', name='home'),
     # url(r'^commitvocab/', include('commitvocab.foo.urls')),
