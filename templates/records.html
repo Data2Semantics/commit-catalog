@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+	<div class='row'>
+		<div class='span12'>
+			<table class="table table-striped table-hover" style="font-size: small;">
+				<thead>
+					<tr>
+						<th>Name</th><th>URL</th><th>Type</th><th>Purpose</th><th>Domain</th><th>Project</th><th>Reporter</th>
+					</tr>
+				</thead>
+				<tbody>
+			{% for r in records %}
+				{% for e in r.entries %}
+				<tr>
+					{% if forloop.first %}
+						<th>{{ r.vocab }}</th>
+					{% else %}
+						<td></td>
+					{% endif %}
+					<td><a href='{{ e.whatstheurlofyourdatasetorvocabulary }}' target='_blank'>{{ e.whatstheurlofyourdatasetorvocabulary }}</a></td>
+					<td>{{ e.areyoureportingonadatasetoravocabulary }}</td>
+					<td>{{ e.whatdoyouusethedatasetorvocabularyfor }}</td>
+					<td>{{ e.whatsthedomainofthedatasetorvocabulary }}</td>
+					<td>{{ e.whatcommitprojectareyouworkingon }}</td>
+					<td>{{ e.whatsyourname }}</td>
+				</tr>
+				{% endfor %}
+			{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+{% endblock content %}
