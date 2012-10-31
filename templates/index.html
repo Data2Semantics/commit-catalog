@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="static/css/bootstrap.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bootstrap.css" />
     <title>{% block title %}COMMIT Vocabularies!{% endblock %}</title>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
@@ -11,7 +11,7 @@
     	<div class='row'>
     		<div class='span12'>
 	    		<div class='well'>
-		    		<h4><img width='90px' src='static/img/logo-no-text-150dpi.png'/><img width='200px' src='static/img/COMMIT_logo_RGB.png'/><div style='valign: top; display: inline;' class='lead'>Data and Vocabulary Catalog</div></h4>
+		    		<h4><img width='90px' src='{{ STATIC_URL }}img/logo-no-text-150dpi.png'/><img width='200px' src='{{ STATIC_URL }}img/COMMIT_logo_RGB.png'/><div style='valign: top; display: inline;' class='lead'>Data and Vocabulary Catalog</div></h4>
 	    		</div>
     		</div>
     	</div>
@@ -51,11 +51,11 @@
         <div class='row'>
         	<div class='span12'>
         		<div>
-        			<img style='height:100px; float: left; padding-top: 50px;' src='static/img/elaborate-logo-150dpi.png'/><img style='height:150px; float:right;' src='static/img/SEALINCMedia-logo-RGB-small-cropped.png'/>
+        			<img style='height:100px; float: left; padding-top: 50px;' src='{{ STATIC_URL }}img/elaborate-logo-150dpi.png'/><img style='height:150px; float:right;' src='{{ STATIC_URL }}img/SEALINCMedia-logo-RGB-small-cropped.png'/>
         		</div>
         	</div>
         </div>
     </div>
-	<script src="static/js/bootstrap.min.js"></script>
+	<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 </body>
 </html>
