@@ -1,4 +1,4 @@
-# Django settings for commitvocab project.
+# Django settings for commitcatalog project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -69,7 +69,8 @@ ADMIN_MEDIA_PREFIX = '/static/admin/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    '/Users/hoekstra/projects/commitvocab/static',
+    '/Users/hoekstra/projects/commitcatalog/static',
+    # '/var/www/commit.data2semantics.org/catalog/static',
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -101,13 +102,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'commitvocab.urls'
+ROOT_URLCONF = 'urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    '/Users/hoekstra/projects/commitvocab/templates',
+    '/Users/hoekstra/projects/commitcatalog/templates',
+    # '/var/www/commit.data2semantics.org/catalog/templates',
 )
 
 INSTALLED_APPS = (
