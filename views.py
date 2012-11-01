@@ -9,6 +9,8 @@ from django.shortcuts import render_to_response, render
 from django.template import RequestContext
 from gdata.spreadsheet.service import SpreadsheetsService
 from gdata.spreadsheet.text_db import Record
+from pprint import pprint
+from copy import copy
 
 client = SpreadsheetsService()
 
@@ -31,8 +33,8 @@ def index(request):
         del(row[group_key])
         
         records_dict.setdefault(vocab,[]).append(row) 
-        
-    sorted_keys = sorted(records_dict, key=records_dict.get)
+
+    sorted_keys = sorted(records_dict.keys())
     
     sorted_records = []
     for k in sorted_keys :
