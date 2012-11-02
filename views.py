@@ -25,7 +25,8 @@ def index(request):
     rfeed = client.GetListFeed(key=key, wksht_id='od6', visibility='public', projection='values')
 
     records_dict = {}
-    group_key = 'whatsthenameofthedatasetorvocabulary'
+    group_key = 'whatsthenameofthedatasetorvocabulary'   
+    
     for r in rfeed.entry :
         record = Record(row_entry=r)
         row = record.content
