@@ -83,7 +83,7 @@ def check_for_updates(records):
 
 def tweet_about_it(name, entry):
     pprint(entry)
-    tweet = 'status={}'.format("{} just added {} to the #COMMIT Data and Vocabulary Catalog at http://bit.ly/d2scatalog".format(entry['whatsyourname'],name))
+    tweet = 'status={}'.format("{} just added {} to the #COMMIT_nl Data and Vocabulary Catalog at http://bit.ly/d2scatalog".format(entry['whatsyourname'].encode('utf-8'),name.encode('utf-8')))
 
     c.request('http://api.twitter.com/1.1/statuses/update.json',method="POST",body=tweet)
     
